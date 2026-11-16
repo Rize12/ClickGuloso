@@ -41,3 +41,29 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:4px solid var(-
 @media(min-width:700px){body{padding-bottom:0}main{padding:1.5rem}.navegacao-inferior{display:none}.navegacao-topo{display:flex;flex-wrap:wrap;gap:.25rem;margin-top:.75rem}.navegacao-topo a{color:#fff;text-decoration:none;font-weight:bold;padding:.6rem .9rem;border-radius:8px;min-height:44px}.navegacao-topo a:hover,.navegacao-topo a:focus-visible{background:rgba(255,255,255,.2)}}
 @media(max-width:699px){.navegacao-topo{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+#formSuporte {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1rem 0;}
+#formSuporte label {
+  font-weight: bold;}
+#formSuporte input,
+#formSuporte textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: 2px solid var(--borda);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--texto);
+  min-height: 48px;}
+#formSuporte textarea {
+  resize: vertical;}
+#areaMensagens {
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 0.25rem;}
+#areaMensagens .cartao {
+  background: #eef4ff;}
+[data-contraste="alto"] #areaMensagens .cartao {
+  background: #111;}

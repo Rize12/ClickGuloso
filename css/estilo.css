@@ -67,3 +67,51 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:4px solid var(-
   background: #eef4ff;}
 [data-contraste="alto"] #areaMensagens .cartao {
   background: #111;}
+
+#formLogin,
+#formLoginAdmin,
+#formMensagem,
+#formResposta {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+#formLogin label,
+#formLoginAdmin label,
+#formMensagem label,
+#formResposta label {
+  font-weight: bold;
+}
+
+#formLogin input,
+#formLoginAdmin input,
+#formMensagem textarea,
+#formResposta textarea,
+#seletorUsuario {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: 2px solid var(--borda);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--texto);
+  min-height: 48px;
+}
+
+#areaMensagens,
+#areaChatAdmin {
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+#areaMensagens .cartao,
+#areaChatAdmin .cartao {
+  background: #eef4ff;
+}
+
+[data-contraste="alto"] #areaMensagens .cartao,
+[data-contraste="alto"] #areaChatAdmin .cartao {
+  background: #111;
+}

@@ -32,50 +32,52 @@
       <a href="glossario.html">Glossário</a>
       <a href="suporte.html" aria-current="page">Suporte</a>
       <a href="ajuda.html">Ajuda</a>
+      <a href="admin.html">Admin</a>
     </nav>
   </header>
 
   <main id="conteudo">
-    <section aria-labelledby="titulo-suporte">
-      <h2 id="titulo-suporte">Suporte</h2>
+    <section id="telaLogin" aria-labelledby="titulo-login">
+      <h2 id="titulo-login">Entrar no suporte</h2>
 
       <p>
-        Converse com outras pessoas ou envie uma dúvida sobre segurança digital.
-        As mensagens aparecem em tempo real.
+        Entre com seu e-mail e senha para conversar com o suporte.
+        Cada pessoa tem um chat separado.
       </p>
+
+      <form id="formLogin" novalidate>
+        <label for="emailLogin">E-mail</label>
+        <input type="email" id="emailLogin" required autocomplete="email" />
+
+        <label for="senhaLogin">Senha</label>
+        <input type="password" id="senhaLogin" required autocomplete="current-password" />
+
+        <button type="submit" class="botao-principal">Entrar</button>
+      </form>
+
+      <p class="feedback" id="statusLogin" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="telaChat" class="escondido" aria-labelledby="titulo-chat">
+      <h2 id="titulo-chat">Chat com o suporte</h2>
 
       <p class="destaque">
         <strong>Atenção:</strong> não envie senha, código de verificação, CPF,
         dados bancários, fotos de documentos ou outras informações pessoais.
       </p>
 
-      <form id="formSuporte" novalidate>
-        <label for="nomeUsuario">Seu nome ou apelido</label>
-        <input
-          type="text"
-          id="nomeUsuario"
-          name="nomeUsuario"
-          maxlength="30"
-          required
-          autocomplete="off"
-        />
+      <div id="areaMensagens" aria-live="polite"></div>
 
-        <label for="mensagemUsuario">Mensagem</label>
-        <textarea
-          id="mensagemUsuario"
-          name="mensagemUsuario"
-          rows="3"
-          maxlength="300"
-          required
-        ></textarea>
+      <form id="formMensagem" novalidate>
+        <label for="mensagemUsuario">Escreva sua mensagem</label>
+        <textarea id="mensagemUsuario" rows="3" maxlength="300" required></textarea>
 
-        <button type="submit" class="botao-principal">Enviar mensagem</button>
+        <button type="submit" class="botao-principal">Enviar</button>
       </form>
 
-      <p class="feedback" id="statusSuporte" role="status" aria-live="polite"></p>
+      <p class="feedback" id="statusMensagem" role="status" aria-live="polite"></p>
 
-      <h3>Mensagens</h3>
-      <div id="areaMensagens" aria-live="polite"></div>
+      <button type="button" id="botaoSair" class="botao-principal">Sair</button>
     </section>
   </main>
 

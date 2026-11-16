@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suporte — Clique Esperto</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+
+<body>
+  <a class="pular-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header>
+    <div class="cabecalho">
+      <h1 class="logo">
+        Clique Esperto
+        <span>Segurança digital para iniciantes</span>
+      </h1>
+
+      <div class="controles">
+        <button type="button" class="botao-icone" id="aumentarFonte" aria-label="Aumentar tamanho do texto">A+</button>
+        <button type="button" class="botao-icone" id="diminuirFonte" aria-label="Diminuir tamanho do texto">A-</button>
+        <button type="button" class="botao-icone" id="alternarContraste" aria-pressed="false" aria-label="Ativar alto contraste">◐</button>
+      </div>
+    </div>
+
+    <nav class="navegacao-topo" aria-label="Menu principal">
+      <a href="index.html">Início</a>
+      <a href="dicas.html">Dicas</a>
+      <a href="exemplos.html">Exemplos</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="glossario.html">Glossário</a>
+      <a href="suporte.html" aria-current="page">Suporte</a>
+      <a href="ajuda.html">Ajuda</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section aria-labelledby="titulo-suporte">
+      <h2 id="titulo-suporte">Suporte</h2>
+
+      <p>
+        Converse com outras pessoas ou envie uma dúvida sobre segurança digital.
+        As mensagens aparecem em tempo real.
+      </p>
+
+      <p class="destaque">
+        <strong>Atenção:</strong> não envie senha, código de verificação, CPF,
+        dados bancários, fotos de documentos ou outras informações pessoais.
+      </p>
+
+      <form id="formSuporte" novalidate>
+        <label for="nomeUsuario">Seu nome ou apelido</label>
+        <input
+          type="text"
+          id="nomeUsuario"
+          name="nomeUsuario"
+          maxlength="30"
+          required
+          autocomplete="off"
+        />
+
+        <label for="mensagemUsuario">Mensagem</label>
+        <textarea
+          id="mensagemUsuario"
+          name="mensagemUsuario"
+          rows="3"
+          maxlength="300"
+          required
+        ></textarea>
+
+        <button type="submit" class="botao-principal">Enviar mensagem</button>
+      </form>
+
+      <p class="feedback" id="statusSuporte" role="status" aria-live="polite"></p>
+
+      <h3>Mensagens</h3>
+      <div id="areaMensagens" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <nav class="navegacao-inferior" aria-label="Navegação do aplicativo">
+    <a href="index.html">
+      <span class="icone" aria-hidden="true">🏠</span>
+      Início
+    </a>
+
+    <a href="dicas.html">
+      <span class="icone" aria-hidden="true">💡</span>
+      Dicas
+    </a>
+
+    <a href="exemplos.html">
+      <span class="icone" aria-hidden="true">⚠️</span>
+      Exemplos
+    </a>
+
+    <a href="suporte.html" aria-current="page">
+      <span class="icone" aria-hidden="true">💬</span>
+      Suporte
+    </a>
+  </nav>
+
+  <footer>
+    <p><strong>Clique Esperto</strong> — projeto educativo sobre segurança digital.</p>
+  </footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/acessibilidade.js"></script>
+  <script type="module" src="js/suporte.js"></script>
+</body>
+</html>
